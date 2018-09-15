@@ -1,0 +1,131 @@
+\chapter{Logische Grundlagen}
+
+Bevor wir uns mit Beweisen beschäftigen können, müssen zunächst die dafür notwendigen logischen
+Grundlagen erarbeitet werden. Hierzu benötigen wir zunächst ein paar Definitionen.
+
+\begin{mydef}
+    Eine \textit{Aussage} ist ein sprachliches Gebilde, das entweder wahr oder falsch ist.
+    Dabei ist es nicht erforderlich, sagen zu können, ob die Aussage wahr oder falsch ist.
+\end{mydef}\  
+
+Am besten veranschaulichen wir uns das mit einem Beispiel und einer Übungsaufgabe.
+
+\begin{example}
+    \begin{enumerate}[(i)]
+        \item
+        Es regnet. (Zeit- und ortsabhängig wahr oder falsch.)
+        \item
+        11 ist durch 5 teilbar.
+        \item
+        Es gibt unendlich viele Primzahlen. (Wahr, Beweis folgt.)
+    \end{enumerate}
+\end{example} \ 
+
+Wir interessieren uns vor allem für mathematische Aussagen und deren Wahrheitsgehalt.
+
+Zunächst benötigen wir jedoch noch Möglichkeiten um mehrere Aussagen \textit{ logisch zu verknüpfen}.
+
+\begin{mydef}
+    Wenn $P$ und $Q$ Aussagen sind, dann heißt $P \wedge Q$ die \textit{Konjunktion} von $P$ und $Q$.
+    Der Wahrheitswert von $P \wedge Q$ ist definiert durch die Wahrheitswerte von $P$ und $Q$ mittels
+    folgender \textit{Wahrheitstafel}: \newline
+    \begin{tabular}{ c | c | c }
+        $P$ & $Q$ & $P \wedge Q$ \\
+        \hline
+        w & w & w \\
+        w & f & f \\
+        f & w & f \\
+        f & f & f \\
+    \end{tabular}
+    \newline 
+    D.h. $P \wedge Q$ ist genau dann wahr, wenn $P$ und $Q$ beide wahr sind, und sonst falsch.
+\end{mydef}\ 
+
+\begin{example}
+    \begin{enumerate}[(i)]
+        \item
+        ($\sqrt{2}$ ist irrational) $\wedge$ ($\sqrt{2} > 0$) (wahr)
+        \item
+        $(2 + 2 = 4) \wedge (3 + 2 = 7)$ (falsch)
+    \end{enumerate}
+\end{example}
+
+\begin{mydef}
+    Wenn $P$ und $Q$ Aussagen sind, so heißt $P \vee Q$ die \textit{Disjunktion} von $P$ und $Q$.
+    Die definierende Wahrheitstafel ist gegeben durch: \newline
+    \begin{tabular}{ c | c | c }
+        $P$ & $Q$ & $P \vee Q$ \\
+        \hline
+        w & w & w \\
+        w & f & w \\
+        f & w & w \\
+        f & f & f \\
+    \end{tabular}
+    \newline 
+    D.h. $P \vee Q$ ist genau dann wahr, wenn mindestens eine der beiden Teilaussagen wahr ist.
+\end{mydef}
+
+\begin{example}
+    \begin{enumerate}[(i)]
+        \item
+        ($\sqrt{2}$ ist irrational) $\vee$ ($\sqrt{2} > 0$) (wahr)
+        \item
+        $(2 + 2 = 4) \vee (3 + 2 = 7)$ (wahr)
+    \end{enumerate}
+\end{example}
+
+\begin{remark}
+    Im Gegensatz zur Umgangssprache ist mit dem mathematischen oder stets das inklusive oder gemeint.
+    Möchte man das exklusive oder verwenden, so nutzt man den Ausdruck "entweder...oder".
+\end{remark}
+
+\begin{mydef}
+    Wenn $P$ eine Aussage ist, dann heißt $\neg P$ die \textit{Negation} von $P$.
+    Definierende Wahrheitstafel: \newline
+    \begin{tabular}{ c | c | c }
+        $P$ &  $\neg P$ \\
+        \hline
+        w & f  \\
+        f & w  \\
+    \end{tabular}
+\end{mydef}
+
+\begin{mydef}
+    Wenn $P$ und $Q$ zwei Aussagen sind, so heißt $P \Rightarrow Q$ (sprich: wenn $P$, dann $Q$) die \textit{Implikation} von Q durch P. 
+    Definierende Wahrheitstafel: \newline
+    \begin{tabular}{ c | c | c }
+        $P$ & $Q$ & $P \Rightarrow Q$ \\
+        \hline
+        w & w & w \\
+        w & f & f \\
+        f & w & w \\
+        f & f & w \\
+    \end{tabular}
+\end{mydef}
+
+\begin{example}
+    \begin{enumerate}[(i)]
+        \item 
+        Wenn $ 3 > 2$, dann teilt $5$ die Zahl $10$.  (wahr)
+        \item 
+        Wenn $2 > 3$, dann ist die Erde eine Scheibe. (wahr)
+    \end{enumerate}
+\end{example}
+
+\begin{mydef}
+    Wenn $P$ und $Q$ Aussagen sind, so heißt die Verknüpfung $(P \Rightarrow Q) \wedge (Q \Rightarrow P)$ die \textit{Äquivalenz} von $P$ und $Q$. 
+    Abkürzend schreibt man auch $P \iff Q$. Die Definierende Wahrheitstafel ist: \newline
+    \begin{tabular}{ c | c | c }
+        $P$ & $Q$ & $P \iff Q$ \\
+        \hline
+        w & w & w \\
+        w & f & f \\
+        f & w & f \\
+        f & f & w \\
+    \end{tabular}
+\end{mydef}
+
+Um all diese neuen Definitionen, und vor allem die Verwendung von Wahrheitstafeln,
+einzuüben, lohnt es sich einige der zugehörigen Übungsaufgaben zu lösen.  Ein paar einführende Beispiele 
+sollten dazu zunächst im Plenum besprochen werden, bevor sich die Studierenden selbst in kleinen Gruppen 
+mit den Aufgaben auseinandersetzen sollen. 
