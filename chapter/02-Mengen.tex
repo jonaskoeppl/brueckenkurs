@@ -1,0 +1,167 @@
+\chapter{Mengen und Elemente}
+
+\section{Mengen und Teilmengen}
+Im Folgenden geben wir eine kurze Einführung in die sogenannte \textit{naive Mengenlehre}. Eine Axiomatisierung der Mengenlehre ist möglich, wird aber hier nicht durchgeführt. 
+Wer sich für eine Axiomatisierung interessiert, dem empfehlen wir die Vorlesung "Mathematische Logik" bei Prof. Dr. Kaiser, diese bietet sich aufgrund des hohen Abstraktionsgrades allerdings eher für spätere Semester an. 
+
+\begin{mydef}
+    Eine \textit{Menge} $M$ ist eine Zusammenfassung von bestimmten wohlunterschiedenen Objekten unserer Anschauung oder unseres Denkens zu einem Ganzen. 
+    Die in einer Menge zusammengefassten Objekte werden auch als \textit{Elemente} von $M$ bezeichnet. 
+\end{mydef}
+
+\begin{remark}
+    Um besser über Mengen und ihre Elemente sprechen zu können brauchen wir noch ein wenig Notation. 
+    \begin{enumerate}[(i)]
+        \item 
+        Ist $x$ ein Element von $M$, so schreiben wir $x \in M$. 
+        \item 
+        Ist $x$ kein Element von $M$, so schreiben wir $x \notin M$. 
+    \end{enumerate}
+\end{remark}
+
+\begin{example}
+    In diesem Beispiel lernen wir einige Mengen und gängige Bezeichnungen kennen, damit wir uns später Schreibarbeit sparen können. 
+    \begin{enumerate}[(i)]
+        \item 
+        Die Menge der \textit{natürlichen Zahlen} : $\N = \{1,2,3,...\}$.
+        \item 
+        Die Menge der \textit{natürlichen Zahlen} inklusive der $0$: $N_0 = \{0,1,2,3,...\}$. 
+        \item 
+        $M = \{$ rot, gelb, blau $\}$. 
+        \item 
+        Die Menge aller Geraden und Dreiecke der Ebene
+        \item 
+        Die Menge aller Polynome $a_0 + a_1 x + ... + a_n x^n$ mit reellen Koeffizienten $a_0,a_1,...,a_n$. 
+        \item 
+        Die leere Menge $\emptyset$. Sie enthält keine Elemente. 
+    \end{enumerate}
+\end{example}
+
+\begin{mydef}
+    Seien $X,Y$ Mengen. Die Menge $X$ heißt \textit{Teilmenge} von $Y$ (und $Y$ heißt \textit{Obermenge} von $X$), 
+    falls jedes Element von $X$ auch ein Element von $Y$ ist. In Zeichen: $X \subseteq Y$. Für die  Negation von $X \subseteq Y$ wird 
+    $X \nsubseteq Y$ geschrieben. 
+\end{mydef}
+
+\begin{example}
+    \begin{enumerate}[(i)]
+        \item 
+        Die Menge $\N$ ist eine Teilmenge von $\N_0$. 
+        \item 
+        Es gilt: $\N \subseteq \Z \subseteq \Q \subseteq \R$. 
+    \end{enumerate}
+\end{example}
+
+\begin{mydef}
+    Sei $X$ eine Menge, so bezeichne  $\mathcal{P}(X)$ die Menge aller Teilmengen von $X$. 
+    $\mathcal{P}(X)$ heißt die \textit{Potenzmenge} von $X$. 
+\end{mydef}
+
+\begin{example}
+    Betrachte die Menge $X = \{1,2\}$. Dann gilt: 
+    \begin{align*}
+        \mathcal{P}(X) = \{\emptyset, \{1\}, \{2\}, \{1,2\}\}
+    \end{align*}
+\end{example}
+
+
+\section{Prädikate und Erzeugung von Teilmengen}
+
+Betrachte zunächst die folgenden beiden Sätze: 
+\begin{enumerate}[(i)]
+    \item 
+    Für jede natürliche Zahl $x$ gilt $x \geq 1$. 
+    \item 
+    $x$ ist kleiner als 5.
+\end{enumerate}
+
+Dann ist $(i)$ eine (wahre Aussage), während man von $(ii)$ nicht sagen kann ob es wahr oder falsch ist, also ist $(ii)$ keine Aussage. 
+Setzt man in $(ii)$ für $x$ eine beliebige natürliche Zahl ein, so erhält man aber eine Aussage. Im Satz $(i)$ kommt $x$ als \textit{gebundene} Variable vor, 
+im Satz $(ii)$ als \textit{freie} bzw. \textit{ungebundene Variable}. 
+
+\begin{mydef}
+    Sätze (hier im umgangssprachlichen Sinn), in denen eine freie Variable $x$ vorkommt und die nach Ersetzen dieser Variablen $x$ durch ein mathematisches Objekt zu einer Aussage werden, 
+    heißen \textit{Prädikate} (= Eigenschaften) von $x$. Sie werden bspw. mit $P(x)$ bezeichnet.
+\end{mydef}
+
+Einige oft verwendete Prädikate erhalten eigene Symbole. 
+
+\begin{mydef}
+    Sei $X$ eine Menge und $P(x)$ ein Prädikat.
+    \begin{enumerate}
+        \item 
+        Die Aussage "Für alle $x \in X$ gilt $P(x)$" wird abgekürzt durch: 
+        \begin{align*}
+            \forall x \in X : P(x).
+        \end{align*}
+        Das Symbol $\forall$ wird auch als \textit{Allquantor} bezeichnet. 
+        \item 
+        Die Aussage "Es gibt ein $x \in X$, für das $P(x)$ gilt" wird abgekürzt durch: 
+        \begin{align*}
+            \exists x \in X : P(x).
+        \end{align*}
+        Das Symbol $\exists$ wird auch als \textit{Existenzquantor} bezeichnet. 
+    \end{enumerate}
+\end{mydef}
+
+\begin{remark}
+    Es gilt: 
+    \begin{align*}
+        [ \neg (\forall x \in X: P(x))] \iff [\exists x \in X: \neg P(x)] \\\
+        [ \neg (\exists x \in X: P(x))] \iff [\forall x \in X: \neg P(x)]
+    \end{align*}
+\end{remark}
+
+\begin{mydef}
+    Sei $X$ eine Menge und $P(x)$ ein Prädikat. Dann bezeichne 
+    \begin{align*}
+        \{ x \in X | P(x) \}
+    \end{align*}
+    diejenige Teilmenge von $X$, die aus allen Elementen von $X$ besteht, für die $P(x)$ wahr ist. 
+\end{mydef}
+
+\begin{example}
+    \begin{enumerate}[(i)]
+        \item 
+        $\{n \in \N | \text{ n ist gerade } \} = \{2,4,6,...\}$. 
+        \item 
+        $\{n \in \Z | \text{ n ist ungerade } \} = \{...,-3,-1,1,3,...\}$. 
+        
+    \end{enumerate}    
+\end{example}\ 
+Mit Hilfe der gerade eingeführten Notation können wir nun elementare Mengenoperationen definieren. 
+
+\begin{mydef}
+    Seien $X,Y$ zwei Mengen. 
+    \begin{enumerate}[(i)]
+        \item  
+        $X \cup Y := \{x | x \in X \vee x \in Y\}$ heißt \textit{Vereinigung} von $X$ und $Y$. 
+        \item 
+        $X \cap Y := \{x | x \in X \wedge x \in Y\}$ heißt \textit{Durchschnitt} von $X$ und $Y$. 
+        \item 
+        $X \setminus Y := \{x | x \in X \wedge x \notin Y\}$ heißt \textit{relatives Komplement} von $Y$ in $X$. 
+        \item 
+        Ist $Y \subset X$, so heißt $X \setminus Y$ das \textit{Komplement} von $Y$ bzgl. $X$ und wird mit $Y^c$ bezeichnet. 
+    \end{enumerate}
+\end{mydef}
+
+\begin{mydef}
+    Durchschnitte und Vereinigungen von Mengen lassen sich auf beliebig viele Mengen verallgemeinern. 
+    Sei dazu $I$ eine Menge und für alle $i \in I$ sei $A_i$ eine Menge. 
+    \begin{enumerate}
+        \item 
+        Die Menge $\bigcup_{i \in I}A_i := \{x | \exists i \in I: x \in A_i\}$ heißt die Vereinigung der Mengen $A_i$,$i \in I$. 
+        \item 
+        Falls $I \neq \emptyset$ heißt die Menge $\bigcap_{i \in I}A_i := \{x | \forall i \in I: x \in A_i\}$  der Durchschnitt der Mengen $A_i$, $i \in I$.
+
+    \end{enumerate} 
+\end{mydef}
+
+\begin{remark}
+    \begin{enumerate}[(i)]
+        \item 
+        Schreibweise für $I = \N$: $\bigcap_{i=1}^{\infty}A_i$ bzw. $\bigcup_{i=1}^{\infty}A_i$.
+        \item 
+        Schreibweise für $I = \{1,...,n\}$: $\bigcap_{i=1}^n A_i$ bzw. $\bigcup_{i=1}^n A_i$.
+    \end{enumerate}
+\end{remark}

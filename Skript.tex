@@ -1,0 +1,101 @@
+\documentclass{report}
+
+% IMPORTS
+\usepackage{ntheorem}
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{enumerate} % für kleine römische Nummerierung
+\usepackage{url}
+\usepackage[onehalfspacing]{setspace} %1,5 Zeilenabstand 
+
+
+% NEWCOMMANDS
+% Syntax: \newcommand{\shortcut}{\wasrauskommensoll}
+
+% Shortcuts für Zahlenbereiche:
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+% Stochastik:
+\newcommand{\WRaum}{(\Omega, \mathcal{A},\mathbb{P})}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\Pos}{\mathcal{P}(\Om)}
+\newcommand{\Om}{\Omega}
+\newcommand{\s}{\sigma}
+\newcommand{\Bor}{\mathcal{B}}
+\newcommand{\mbr}[1]{$(\Om_{#1}, \A_{#1})$}
+\newcommand{\topspace}[1]{$(\Om_{#1}, \mathcal{O}_{#1})$}
+\newcommand{\Fbar}{\bar{\mathcal{F}}(\Om, \A)}
+\newcommand{\Fbarplus}{\bar{\mathcal{F}}_+(\Om, \A)}
+\newcommand{\fmb}{\mathcal{F}(\Om, \A)}
+
+
+% THEOREMSTYLES
+
+\theorembodyfont{\upshape}
+\theoremstyle{changebreak} %Sorgt für Zeilenumbruch nach Titel und Nummer vor Name
+
+\newtheorem{theorem}{Satz} % Sätze, sollte später evtl. noch Lemma und Korollar hinzufügen
+\numberwithin{theorem}{chapter}
+
+\newtheorem{mydef}[theorem]{Definition} % Definitionen
+\numberwithin{theorem}{chapter}
+
+\newtheorem{example}[theorem]{Beispiel} % Beispiele
+\numberwithin{theorem}{chapter}
+
+\newtheorem{proposition}[theorem]{Proposition} % Propositionen
+\numberwithin{theorem}{chapter}
+
+\newtheorem{remark}[theorem]{Bemerkung} %Bemerkungen
+\numberwithin{theorem}{chapter}
+
+\newtheorem{lemma}[theorem]{Lemma} %Lemmata
+\numberwithin{theorem}{chapter}
+
+\newtheorem*{proof*}{Beweis:}
+
+\setlength\parindent{0pt} %Kein Einzug bei neuem Paragraphen. 
+
+\begin{document}
+
+\begin{titlepage}
+    \ \newline\newline\newline\newline\newline
+
+	\begin{center}
+
+		\huge Skriptum \\
+		\Huge\textbf{Brückenkurs Mathematik}\\
+		\huge im Wintersemester 2018/2019\\ 
+		\normalsize
+
+		\vspace{1cm}
+		\begin{tabular}[b]{l|l}
+			\textbf{\ author}      & Jonas Köppl, N.N. \\\
+            \textbf{last change}   & \today \\\
+            \textbf{github}        & \url{TODO}
+		\end{tabular}
+		\vspace{1cm}
+
+	\end{center}
+
+\end{titlepage}
+
+\tableofcontents 
+
+
+\include{chapter/00-Einfuehrung}
+\include{chapter/01-Grundlagen}
+\include{chapter/02-Mengen}
+%TODO: Rechenregeln für Mengenoperationen, DeMorgan und Indexmengen
+\include{chapter/03-Aufbau}
+%TODO: Widerspruchsbeweis überarbeiten und Teilbarkeitsbeweise genauer anschauen. 
+\include{chapter/04-Relationen}
+\end{document}
