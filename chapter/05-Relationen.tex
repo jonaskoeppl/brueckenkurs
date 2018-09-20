@@ -47,7 +47,9 @@ Eine Relation kann verschiedene Eigenschaften haben:
     \end{enumerate}
 \end{mydef}
 
-TODO: Hierzu ein Beispiel. 
+\begin{example}
+    Die bereits aus der Schule bekannte Relation $\leq$ ist reflexiv, antisymmetrisch und transitiv, aber nicht symmetrisch. 
+\end{example}
 
 \begin{mydef}
     Eine Relation $R$ auf einer Menge $X$ wird als \textit{Äquivalenzrelation} bezeichnet, falls $R$ reflexiv, symmetrisch und transitiv ist. 
@@ -60,17 +62,17 @@ TODO: Hierzu ein Beispiel.
 \begin{proposition}
     Sei $X$ eine Menge. Dann ist durch 
     \begin{align*}
-        R := \{ (A,B) | A \subseteq B \}
+        R := \{ (A,B) | \  A \subseteq B \ \}
     \end{align*}
     eine partielle Ordnung auf $\mathcal{P}(X)$ definiert. 
 \end{proposition}
 
-Beweis zur Übung? 
+
 
 \begin{proposition}
     Sei $m \in \Z$. Dann ist durch 
     \begin{align*}
-        R_m := \{(a,b)| m \mid (b-a)\}
+        R_m := \{(a,b) | \ m \text{ teilt } (b-a) \ \}
     \end{align*}
     eine Äquivalenzrelation auf $\Z$ definiert. 
 \end{proposition}
@@ -93,7 +95,7 @@ Beweis zur Übung?
 \begin{remark}
     Wenn man die Begriffe der Linktstotalität und der Rechtseindeutigkeit zusammenfasst erhält man 
     \begin{align}
-        \forall a \in A \exists ! b \in B : (a,b) \in R. 
+        \forall a \in A \  \exists ! b \in B : \ (a,b) \in R. 
     \end{align}
     Dies wird in der Literatur vereinzelt auch als \textit{Funktionseigenschaft} bezeichnet. 
 \end{remark}
@@ -102,7 +104,7 @@ Beweis zur Übung?
     Funktionen können natürlich mit der für Relationen kennengelernten Notation aufgeschrieben werden, allerdings hat sich in der heutigen Zeit die folgende Notation
     für eine Funktion $f$ von $A$ nach $B$ durchgesetzt: 
     \begin{align*}
-        f : A \to B, x \mapsto f(x)
+        f : A \to B, \quad x \mapsto f(x)
     \end{align*}
     Hierbei ist es wichtig anzumerken, dass jede Funktionsdefinition aus zwei Bausteinen besteht: 
     \begin{enumerate}
@@ -114,11 +116,11 @@ Beweis zur Übung?
 \begin{example}
     \begin{enumerate}[(i)]
         \item
-        $f: \Z \to \Z, x \mapsto x^2 $. 
+        $f: \Z \to \Z, \ x \mapsto x^2 $. 
         \item 
         Sei $X$ eine nichtleere Menge. Dann heißt die Abbildung 
         \begin{align*}
-            id_X : X \to X, x \mapsto x
+            id_X : X \to X, \ x \mapsto x
         \end{align*}
         die \textit{Identität} auf $X$. 
         \item 
@@ -127,7 +129,7 @@ Beweis zur Übung?
 \end{example}
 
 Oftmals ist es notwendig Funktionen auf spezielle Eigenschaften zu untersuchen. Einige dieser Eigenschaften,
-die euch im Laufe des Studiums noch häufiger begegnen werden, werden im Folgenden vorgestellt. %TODO: Satzbau. 
+die Ihnen im Laufe des Studiums noch häufiger begegnen, werden im Folgenden vorgestellt. 
 
 \begin{mydef}
     Seien $A,B$ nichtleere Mengen. Eine Abbildung $f:A \to B$ heißt

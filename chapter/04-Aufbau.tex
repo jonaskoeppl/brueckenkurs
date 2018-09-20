@@ -100,22 +100,22 @@ Allgemeiner lassen sich die folgenden Regeln zeigen:
         \item 
         Für jedes $a \in \Z$ gilt: 
         \begin{align*}
-            a \mid 0, 1 \mid a, -1 \mid a, a \mid a, -a \mid a, a \mid -a
+            a \mid 0, \quad 1 \mid a, \quad -1 \mid a,  \quad a \mid a, \quad -a \mid a, \quad a \mid -a . 
         \end{align*}
         \item 
         Für $a,b,c \in \Z$ gilt: 
         \begin{align*}
-            (a \mid b \ \wedge \ b \mid c) \Rightarrow a \mid c 
+            (a \mid b \ \wedge \ b \mid c) \Rightarrow a \mid c . 
         \end{align*}
         \item 
         Seien $a,b_1,...,b_n \in \Z$. Gilt $a \mid b_i$ für alle $i \in \{1,...,n\}$, so gilt für alle $x_1,...,x_n \in \Z$: 
         \begin{align*}
-            a \mid x_1 b_1 + ... + x_n b_n 
+            a \mid x_1 b_1 + ... + x_n b_n .
         \end{align*}
         \item 
         Für $a,b,c,d \in \Z$ gilt: 
         \begin{align*}
-            (a \mid c \ \wedge  \ b \mid d) \Rightarrow ab \mid dc 
+            (a \mid c \ \wedge  \ b \mid d) \Rightarrow ab \mid dc . 
         \end{align*}
     \end{enumerate}
 \end{theorem}
@@ -129,14 +129,14 @@ Eine weitere oft verwendete Beweistechnik ist die des \textit{Indirekten Beweis}
 Seien $V$ und $B$ zwei Aussagen, dann gilt: 
 
 \begin{align}
-    (V \Rightarrow B) \iff (\neg B \Rightarrow \neg V)
+    (V \Rightarrow B) \iff (\neg B \Rightarrow \neg V). 
 \end{align}
 
 Diese Beweistechnik bietet sich in einigen Fällen an, da die rechte Implikation manchmal einfacher zu zeigen ist als die linke. 
 Zusammengefasst ergibt sich das folgende Schema um eine Aussage der Form $A \Rightarrow B$ zu zeigen: 
 \begin{enumerate}
     \item 
-    Wir nehmen an es gelte $\neg B$ (und bringen dies auch zum Ausdruck, sodass auch der Leser oder Korrektor sieht was wir vorhaben).
+    Wir nehmen an es gelte $\neg B$ (und bringen dies auch zum Ausdruck, sodass auch der Leser oder Korrektor sieht, was wir vorhaben).
     \item 
     Aus der Aussage $\neg B$ und anderen uns zur Verfügung stehenden Definitionen und Sätzen leiten wir $\neg V$ ab. 
     \item 
@@ -150,19 +150,14 @@ Diese Vorgehensweise werden wir nun verwenden um den folgenden Satz zu beweisen.
     Sei also $n \in \Z$ ungerade. Wir zeigen nun, dass dann auch das Quadrat von $n$ ungerade ist. Da $n$ ungerade ist existiert $c \in \Z$ mit $n = 2c + 1$. 
     Somit erhalten wir durch Anwendung der ersten binomischen Formel: 
     \begin{align*}
-        n^2 = (2c +1)^2 = 4c^2 + 4c + 1 = 2(2c^2+2c) + 1 
+        n^2 = (2c +1)^2 = 4c^2 + 4c + 1 = 2(2c^2+2c) + 1 . 
     \end{align*}
     Also ist $n^2$ ungerade und die Behauptung gezeigt. 
     \hfill $\square$
 \end{proof*}
 
-Für diese Beweistechnik ist es sehr wichtig, dass man sich darüber im Klaren ist, wie die Negation einer Aussage lautet. Daher wollen wir dies mit ein paar Beispielen vertiefen. 
-\begin{example} % TODO: Übungsaufgabe, ggf auf Übungsblatt packen. 
-    Formulieren Sie die logische Negation von: 
-    \begin{align*}
-        \forall x \in \R: \forall \varepsilon > 0 \ \exists y \in \Q : -\varepsilon < x - y < \varepsilon
-    \end{align*}
-\end{example}
+Für diese Beweistechnik ist es sehr wichtig, dass man sich darüber im Klaren ist, wie die Negation einer Aussage lautet. Daher wollen wir dies mit ein paar Beispielen vertiefen.  
+
 
 \subsection{Widerspruchsbeweis} %TODO: überarbeiten. 
 
@@ -174,15 +169,15 @@ Der \textit{Widerspruchsbeweis} (auch bekannt als \textit{Reductio ad absurdum})
 Ein Beweis per Widerspruch verläuft also nach dem folgenden Schema: 
 \begin{enumerate}
     \item 
-    Wir bringen zum Ausdruck, dass der Beweis per Widerspruch erfolgen soll. Meist schreibt man einfach: "Widerspruchsannahme: $\neg B$". 
+    Wir bringen zum Ausdruck, dass der Beweis per Widerspruch erfolgen soll. Meist schreibt man einfach: \glqq Widerspruchsannahme: $\neg B$ \grqq. 
     Auch hier ist es wichtig, dass man die Negation der Aussage $B$ richtig formuliert. 
     \item 
     Aus den Aussagen $V$ und $\neg B$ leiten wir nun eine Aussage ab, von der wir bereits wissen, dass sie falsch ist. 
     \item 
-    Um zu zeigen, dass dies der gewünschte Widerspruch ist markieren wir die Stelle durch einen Blitz oder durch das Wort "Widerspruch". 
+    Um zu zeigen, dass dies der gewünschte Widerspruch ist markieren wir die Stelle durch einen Blitz oder durch das Wort \glqq Widerspruch \grqq. 
 \end{enumerate}
 
-Da diese Beweistechnik einem nicht direkt einleuchtend erscheint werden wir uns ein paar Beispiele dazu anschauen. 
+Da diese Beweistechnik einem nicht direkt einleuchtend erscheint, werden wir uns ein paar Beispiele dazu anschauen. 
 
 \begin{lemma}
     \begin{enumerate}[(i)]
@@ -193,7 +188,7 @@ Da diese Beweistechnik einem nicht direkt einleuchtend erscheint werden wir uns 
         \item 
         Für $a,b \in \Z$ gilt: 
         \begin{align*}
-            a \mid b \ \wedge \ b \mid a \iff b = a \text{  oder } b = -a
+            a \mid b \ \wedge \ b \mid a \iff b = a \text{  oder } b = -a. 
         \end{align*}
     \end{enumerate}
 \end{lemma}
@@ -221,7 +216,7 @@ Da diese Beweistechnik einem nicht direkt einleuchtend erscheint werden wir uns 
 \begin{proof*}%TODO: überarbeiten
     Angenommen die Behauptung des Lemmas ist falsch. Dann gibt es insbesondere eine kleinste natürliche Zahl $a$ mit $a>1$ für die keine derartige Zerlegung existiert. 
     Zunächst einmal halten wir fest, dass dann $a$ keine Primzahl sein kann. Denn sonst wäre $a$ ja trivialerweise ein Produkt von Primzahlen. 
-    Also gibt es eine Zahl $b \in \N \setminus \{1,a\}$ mit $b \mid a$. Daher existiert nach Definition $c \in \N$ mit $a = b \cdot c$. Nach Satz XXXX gilt ferner: 
+    Also gibt es eine Zahl $b \in \N \setminus \{1,a\}$ mit $b \mid a$. Daher existiert nach Definition $c \in \N$ mit $a = b \cdot c$. Nach Lemma 4.8 gilt ferner: 
     $b < a$ und $c < a$. Da $a$ die kleinste natürliche Zahl ist, die keine derartige Zerlegung besitzt lassen sich $b$ und $c$ in Primfaktoren zerlegen: 
     \begin{align*}
         b &= p_1 \cdot ... \cdot p_s \\\
@@ -234,7 +229,8 @@ Da diese Beweistechnik einem nicht direkt einleuchtend erscheint werden wir uns 
     Im Widerspruch zur Voraussetzung. Also besitzt jede natürliche Zahl eine Primfaktorzerlegung. \hfill $\square$
 \end{proof*}
 
-Auf Basis dieses Lemmas können wir nun den folgenden, auf Euklid zurückgehenden, Satz beweisen. Auch diesen werden wir per Widerspruch beweisen. 
+Auf Basis dieses Lemmas können wir nun den folgenden, auf Euklid zurückgehenden Satz beweisen. 
+Auch diesen werden wir per Widerspruch beweisen. 
 
 \begin{theorem}
     Es gibt unendlich viele Primzahlen. 
@@ -249,8 +245,8 @@ Auf Basis dieses Lemmas können wir nun den folgenden, auf Euklid zurückgehende
     \begin{align*}
         a = p_1 ... p_n + 1 
     \end{align*}
-    Dann gilt offensichtlich $a>1$. Nach Lemma xx.xx lässt sich $a$ also in Primfaktoren zerlegen. Es gilt also $p_i \mid a$ für ein $i \in \{1,...,n\}$. 
-    Wegen $p_i \mid p_1 ... p_n$ gilt nach Satz xx.xx : $p_i \mid a - p_1 ... p_n = 1$. Also $p_i \mid 1$. Dies liefert $p_i = 1$. Im Widerspruch dazu, dass $p_i$ eine Primzahl ist.\hfill $\square$ 
+    Dann gilt offensichtlich $a>1$. Nach Lemma 4.10 lässt sich $a$ also in Primfaktoren zerlegen. Es gilt also $p_i \mid a$ für ein $i \in \{1,...,n\}$. 
+    Wegen $p_i \mid p_1 ... p_n$ gilt nach Satz 4.6 : $p_i \mid a - p_1 ... p_n = 1$. Also $p_i \mid 1$. Dies liefert $p_i = 1$. Im Widerspruch dazu, dass $p_i$ eine Primzahl ist.\hfill $\square$ 
 \end{proof*}
 
 Ein weiteres klassisches Resultat welches man per Widerspruch beweist ist der folgenden Satz, den wir schon zuvor als Beispiel gesehen haben. 
@@ -261,16 +257,16 @@ Ein weiteres klassisches Resultat welches man per Widerspruch beweist ist der fo
     Angenommen $\sqrt{2}$ ist rational. Dann existieren $p,q \in \N$ mit $\sqrt{2} = \frac{p}{q}$. Ferner seien $p$ und $q$ teilerfremd. 
     Es gilt also insbesondere: 
     \begin{align*}
-        (\frac{p}{q})^2 = 2 . 
+        \big(\frac{p}{q}\big)^2 = 2 . 
     \end{align*}
     Somit folgt durch umstellen: 
     \begin{align*}
         p^2 = 2q^2.
     \end{align*}
-    Also ist $p^2$ eine gerade Zahl. Nach Satz xx.xx ist also auch $p$ gerade, folglich existiert ein $n \in \N$ mit $p = 2n$. 
+    Also ist $p^2$ eine gerade Zahl. Nach Satz 4.7 ist also auch $p$ gerade, folglich existiert ein $n \in \N$ mit $p = 2n$. 
     Dies liefert wiederum: 
     \begin{align*}
-        2q^2 = p^2 = (2n)^2 = 4n^2
+        2q^2 = p^2 = (2n)^2 = 4n^2. 
     \end{align*}
     Also gilt insbesondere $q^2 = 2n^2$. Also ist auch $q$ durch zwei teilbar. Im Widerspruch dazu, dass $p$ und $q$ teilerfremd sind. 
     Somit kann $\sqrt{2}$ keine rationale Zahl sein und die Behauptung ist gezeigt. \hfill $\square$. 

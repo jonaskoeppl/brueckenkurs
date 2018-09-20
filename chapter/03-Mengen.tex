@@ -2,7 +2,7 @@
 
 \section{Mengen und Teilmengen}
 Im Folgenden geben wir eine kurze Einführung in die sogenannte \textit{naive Mengenlehre}. Eine Axiomatisierung der Mengenlehre ist möglich, wird aber hier nicht durchgeführt. 
-Wer sich für eine Axiomatisierung interessiert, dem empfehlen wir die Vorlesung "Mathematische Logik" bei Prof. Dr. Kaiser, diese bietet sich aufgrund des hohen Abstraktionsgrades allerdings eher für spätere Semester an. 
+Wer sich für eine Axiomatisierung interessiert, dem empfehlen wir die Vorlesung \glqq Mathematische Logik \grqq bei Prof. Dr. Kaiser, diese bietet sich aufgrund des hohen Abstraktionsgrades allerdings eher für spätere Semester an. 
 
 \begin{mydef}
     Eine \textit{Menge} $M$ ist eine Zusammenfassung von bestimmten wohlunterschiedenen Objekten unserer Anschauung oder unseres Denkens zu einem Ganzen. 
@@ -75,7 +75,7 @@ Betrachte zunächst die folgenden beiden Sätze:
     $x$ ist kleiner als 5.
 \end{enumerate}
 
-Dann ist $(i)$ eine (wahre Aussage), während man von $(ii)$ nicht sagen kann ob es wahr oder falsch ist, also ist $(ii)$ keine Aussage. 
+Dann ist $(i)$ eine (wahre Aussage), während man von $(ii)$ nicht sagen kann, ob es wahr oder falsch ist, also ist $(ii)$ keine Aussage. 
 Setzt man in $(ii)$ für $x$ eine beliebige natürliche Zahl ein, so erhält man aber eine Aussage. Im Satz $(i)$ kommt $x$ als \textit{gebundene} Variable vor, 
 im Satz $(ii)$ als \textit{freie} bzw. \textit{ungebundene Variable}. 
 
@@ -90,19 +90,19 @@ Einige oft verwendete Prädikate erhalten eigene Symbole.
     Sei $X$ eine Menge und $P(x)$ ein Prädikat.
     \begin{enumerate}
         \item 
-        Die Aussage " Für alle $x \in X$ gilt $P(x)$"  wird abgekürzt durch: 
+        Die Aussage \glqq Für alle $x \in X$ gilt $P(x)$ \grqq  wird abgekürzt durch: 
         \begin{align*}
             \forall x \in X : P(x).
         \end{align*}
         Das Symbol $\forall$ wird auch als \textit{Allquantor} bezeichnet. 
         \item 
-        Die Aussage $"$ Es gibt ein $x \in X$, für das $P(x)$ gilt"  wird abgekürzt durch: 
+        Die Aussage \glqq Es gibt ein $x \in X$, für das $P(x)$ gilt \grqq  wird abgekürzt durch: 
         \begin{align*}
             \exists x \in X : P(x).
         \end{align*}
         Das Symbol $\exists$ wird auch als \textit{Existenzquantor} bezeichnet. 
         \item 
-        Die Aussage $"$ Es gibt genau ein $x \in X$, für das $P(x)$ gilt$"$ wird abgekürzt durch:
+        Die Aussage \glqq Es gibt genau ein $x \in X$, für das $P(x)$ gilt \grqq wird abgekürzt durch:
         \begin{align*}
             \exists ! x \in X : P(x). 
         \end{align*}
@@ -112,15 +112,15 @@ Einige oft verwendete Prädikate erhalten eigene Symbole.
 \begin{remark}
     Es gilt: 
     \begin{align*}
-        [ \neg (\forall x \in X: P(x))] \iff [\exists x \in X: \neg P(x)] \\\
-        [ \neg (\exists x \in X: P(x))] \iff [\forall x \in X: \neg P(x)]
+        [ \neg (\forall x \in X: P(x))] \iff [\exists x \in X: \neg P(x)]. \\\
+        [ \neg (\exists x \in X: P(x))] \iff [\forall x \in X: \neg P(x)].
     \end{align*}
 \end{remark}
 
 \begin{mydef}
     Sei $X$ eine Menge und $P(x)$ ein Prädikat. Dann bezeichne 
     \begin{align*}
-        \{ x \in X | P(x) \}
+        \{ x \in X \mid \ P(x) \ \}
     \end{align*}
     diejenige Teilmenge von $X$, die aus allen Elementen von $X$ besteht, für die $P(x)$ wahr ist. Diese Darstellung einer Menge heißt auch \textit{intensional}. 
     Das bloße Aufzählen der beinhalteten Elemente wird als \textit{extensional} bezeichnet. 
@@ -129,9 +129,9 @@ Einige oft verwendete Prädikate erhalten eigene Symbole.
 \begin{example}
     \begin{enumerate}[(i)]
         \item 
-        $\{n \in \N | \text{ n ist gerade } \} = \{2,4,6,...\}$. 
+        $\{n \in \N \mid \text{ n ist gerade } \} = \{2,4,6,...\}$. 
         \item 
-        $\{n \in \Z | \text{ n ist ungerade } \} = \{...,-3,-1,1,3,...\}$. 
+        $\{n \in \Z \mid \text{ n ist ungerade } \} = \{...,-3,-1,1,3,...\}$. 
     \end{enumerate}   
     Die Beschreibung auf der linken Seite ist jeweils die intensionale Schreibweise, während auf der rechten Seite die extensionale Mengenschreibweise verwendet wird. 
 \end{example}\ 
@@ -141,11 +141,11 @@ Mit Hilfe der gerade eingeführten Notation können wir nun elementare Mengenope
     Seien $X,Y$ zwei Mengen. 
     \begin{enumerate}[(i)]
         \item  
-        $X \cup Y := \{x | x \in X \vee x \in Y\}$ heißt \textit{Vereinigung} von $X$ und $Y$. 
+        $X \cup Y := \{x \mid x \in X \vee x \in Y\}$ heißt \textit{Vereinigung} von $X$ und $Y$. 
         \item 
-        $X \cap Y := \{x | x \in X \wedge x \in Y\}$ heißt \textit{Durchschnitt} von $X$ und $Y$. 
+        $X \cap Y := \{x \mid x \in X \wedge x \in Y\}$ heißt \textit{Durchschnitt} von $X$ und $Y$. 
         \item 
-        $X \setminus Y := \{x | x \in X \wedge x \notin Y\}$ heißt \textit{relatives Komplement} von $Y$ in $X$. 
+        $X \setminus Y := \{x \mid x \in X \wedge x \notin Y\}$ heißt \textit{relatives Komplement} von $Y$ in $X$. 
         \item 
         Ist $Y \subset X$, so heißt $X \setminus Y$ das \textit{Komplement} von $Y$ bzgl. $X$ und wird mit $Y^c$ bezeichnet. 
     \end{enumerate}
@@ -156,9 +156,9 @@ Mit Hilfe der gerade eingeführten Notation können wir nun elementare Mengenope
     Sei dazu $I$ eine Menge und für alle $i \in I$ sei $A_i$ eine Menge. 
     \begin{enumerate}
         \item 
-        Die Menge $\bigcup_{i \in I}A_i := \{x | \exists i \in I: x \in A_i\}$ heißt die Vereinigung der Mengen $A_i$,$i \in I$. 
+        Die Menge $\bigcup_{i \in I}A_i := \{x \mid \exists i \in I: x \in A_i\}$ heißt die Vereinigung der Mengen $A_i$, $i \in I$. 
         \item 
-        Falls $I \neq \emptyset$ heißt die Menge $\bigcap_{i \in I}A_i := \{x | \forall i \in I: x \in A_i\}$  der Durchschnitt der Mengen $A_i$, $i \in I$.
+        Falls $I \neq \emptyset$ heißt die Menge $\bigcap_{i \in I}A_i := \{x \mid \forall i \in I: x \in A_i\}$  der Durchschnitt der Mengen $A_i$, $i \in I$.
 
     \end{enumerate} 
 \end{mydef}
