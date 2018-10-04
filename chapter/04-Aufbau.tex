@@ -26,13 +26,13 @@ vorliegende mathematische Objekt \textit{eindeutig} entscheiden kann, ob dieses 
 \end{mydef}
 
 \begin{mydef}
-    Eine Zahl $p \in \N$ heißt \textit{Primzahl}, falls $p > 1$ ist und $1$ und $p$ die einzigen natürlichen Zahlen sind die $p$ teilen. Eine Zahl $n \in \N$ die keine Primzahl ist heißt \textit{zusammengesetzt}. 
+    Eine Zahl $p \in \N$ heißt \textit{Primzahl}, falls $p > 1$ ist und $1$ und $p$ die einzigen natürlichen Zahlen sind die $p$ teilen. Eine Zahl $n \in \N$, die keine Primzahl ist, heißt \textit{zusammengesetzt}. 
 \end{mydef}
 
 Eine mathematische Definition sollte stets folgende Eigenschaften haben: 
 \begin{itemize}
     \item 
-    \textbf{Eindeutigkeit}: Man kann eindeutig entscheiden, ob ein mathematische Objekt die Definition erfüllt oder nicht. 
+    \textbf{Eindeutigkeit}: Man kann eindeutig entscheiden, ob ein mathematisches Objekt die Definition erfüllt oder nicht. 
     \item 
     \textbf{Minimalität}: Es werden nur so viele Eigenschaften benutzt, wie für den Begriff unbedingt notwendig sind. 
     D.h. insbesondere, dass sich keine der Eigenschaften aus den restlichen Eigenschaften ableiten lässt. 
@@ -73,12 +73,12 @@ Unter einem mathematischen Satz (Lemma, Korollar, etc.) verstehen wir eine nicht
 \subsection{Direkter Beweis}
 Der direkte Beweis beweist eine Aussage durch schrittweises Folgen von Aussagen auf Basis der gegebenen Voraussetzung. 
 Sei dazu $V$ die Voraussetzung und $B$ die zu zeigende Behauptung. Unsere Aufgabe ist es also nun, geeignete Aussagen $A_1, A_2,...,A_n$ zu finden, 
-so dass schließlich gilt: 
+sodass schließlich gilt: 
 \begin{align*}
     (V \Rightarrow A_1) \wedge (A_1 \Rightarrow A_2) \wedge ... \wedge (A_n \Rightarrow B)
 \end{align*}
 Ist uns dies gelungen, so haben wir gezeigt, dass aus der Voraussetzung $V$ stets auch die Behauptung $B$ folgt. 
-Am Besten veranschaulichen wir uns dies anhand eines einfachen Beispiels aus der Zahlentheorie. 
+Am besten veranschaulichen wir uns dies anhand eines einfachen Beispiels aus der Zahlentheorie. 
 \begin{proposition}
     Sei $a \in \Z$ gerade. Dann ist auch $a^2 = a \cdot a$ gerade. 
 \end{proposition}
@@ -174,7 +174,7 @@ Ein Beweis per Widerspruch verläuft also nach dem folgenden Schema:
     \item 
     Aus den Aussagen $V$ und $\neg B$ leiten wir nun eine Aussage ab, von der wir bereits wissen, dass sie falsch ist. 
     \item 
-    Um zu zeigen, dass dies der gewünschte Widerspruch ist markieren wir die Stelle durch einen Blitz oder durch das Wort \glqq Widerspruch \grqq. 
+    Um zu zeigen, dass dies der gewünschte Widerspruch ist markieren wir die Stelle durch einen Blitz oder durch das Wort \glqq Widerspruch\grqq. 
 \end{enumerate}
 
 Da diese Beweistechnik einem nicht direkt einleuchtend erscheint, werden wir uns ein paar Beispiele dazu anschauen. 
@@ -215,7 +215,7 @@ Da diese Beweistechnik einem nicht direkt einleuchtend erscheint, werden wir uns
 
 \begin{proof*}%TODO: überarbeiten
     Angenommen die Behauptung des Lemmas ist falsch. Dann gibt es insbesondere eine kleinste natürliche Zahl $a$ mit $a>1$ für die keine derartige Zerlegung existiert. 
-    Zunächst einmal halten wir fest, dass dann $a$ keine Primzahl sein kann. Denn sonst wäre $a$ ja trivialerweise ein Produkt von Primzahlen. 
+    Zunächst einmal halten wir fest, dass dann $a$ keine Primzahl sein kann, denn sonst wäre $a$ ja trivialerweise ein Produkt von Primzahlen. 
     Also gibt es eine Zahl $b \in \N \setminus \{1,a\}$ mit $b \mid a$. Daher existiert nach Definition $c \in \N$ mit $a = b \cdot c$. Nach Lemma 4.8 gilt ferner: 
     $b < a$ und $c < a$. Da $a$ die kleinste natürliche Zahl ist, die keine derartige Zerlegung besitzt lassen sich $b$ und $c$ in Primfaktoren zerlegen: 
     \begin{align*}
@@ -249,7 +249,7 @@ Auch diesen werden wir per Widerspruch beweisen.
     Wegen $p_i \mid p_1 ... p_n$ gilt nach Satz 4.6 : $p_i \mid a - p_1 ... p_n = 1$. Also $p_i \mid 1$. Dies liefert $p_i = 1$. Im Widerspruch dazu, dass $p_i$ eine Primzahl ist.\hfill $\square$ 
 \end{proof*}
 
-Ein weiteres klassisches Resultat welches man per Widerspruch beweist ist der folgenden Satz, den wir schon zuvor als Beispiel gesehen haben. 
+Ein weiteres klassisches Resultat, welches man per Widerspruch beweist, ist der folgenden Satz, den wir schon zuvor als Beispiel gesehen haben. 
 \begin{theorem}
     Die Zahl $\sqrt{2}$ ist irrational. D.h. ist $q \in \Q$, so gilt $q \neq \sqrt{2}$. 
 \end{theorem}
@@ -259,16 +259,16 @@ Ein weiteres klassisches Resultat welches man per Widerspruch beweist ist der fo
     \begin{align*}
         \big(\frac{p}{q}\big)^2 = 2 . 
     \end{align*}
-    Somit folgt durch umstellen: 
+    Somit folgt durch Umstellen: 
     \begin{align*}
         p^2 = 2q^2.
     \end{align*}
-    Also ist $p^2$ eine gerade Zahl. Nach Satz 4.7 ist also auch $p$ gerade, folglich existiert ein $n \in \N$ mit $p = 2n$. 
+    Also ist $p^2$ eine gerade Zahl. Nach Satz 4.7 ist damit auch $p$ gerade, folglich existiert ein $n \in \N$ mit $p = 2n$. 
     Dies liefert wiederum: 
     \begin{align*}
         2q^2 = p^2 = (2n)^2 = 4n^2. 
     \end{align*}
-    Also gilt insbesondere $q^2 = 2n^2$. Also ist auch $q$ durch zwei teilbar. Im Widerspruch dazu, dass $p$ und $q$ teilerfremd sind. 
+    Also gilt insbesondere $q^2 = 2n^2$. Daher ist auch $q$ durch zwei teilbar. Im Widerspruch dazu, dass $p$ und $q$ teilerfremd sind. 
     Somit kann $\sqrt{2}$ keine rationale Zahl sein und die Behauptung ist gezeigt. \hfill $\square$. 
 
 \end{proof*}
@@ -280,9 +280,9 @@ Dies führt bei vielen zu Frustration, da die Gedankengänge an sich oftmals in 
 Im Folgenden geben wir einige Tipps, die beim Aufschreiben eines Beweises bzw. beim Bearbeiten von Übungsaufgaben helfen können. 
 \newline 
 \newline 
-\textbf{Voraussetzungen(Setting)}:\newline 
-Der erste Schritt eines jeden Beweises ist es die Voraussetzungen klar und deutlich aufzuschreiben. 
-Es ist oftmals sinnvoll die einzelnen Teilaussagen des Settings durchzunummerieren. 
+\textbf{Voraussetzungen (Setting)}:\newline 
+Der erste Schritt eines jeden Beweises ist es, die Voraussetzungen klar und deutlich aufzuschreiben. 
+Es ist oftmals sinnvoll, die einzelnen Teilaussagen des Settings durchzunummerieren. 
 \newline\newline  
 \textbf{Skizze}:\newline 
 Manchmal kann es durchaus hilfreich sein, sich eine Skizze von einem Sachverhalt zu machen. Dies dient dazu, ein besseres Verständnis des Problems zu erhalten. 
@@ -297,7 +297,7 @@ OBdA ist die Abkürzung von \textit{Ohne Beschränkung der Allgemeintheit} und O
 Dieses Mittel sollte auf jeden Fall mit Bedacht eingesetzt werden. 
 \newline\newline 
 \textbf{Gegenbeispiele}:\newline
-Gegenbeispiele sind das Mittel der Wahl um eine falsche Aussage zu widerlegen. 
+Gegenbeispiele sind das Mittel der Wahl, um eine falsche Aussage zu widerlegen. 
 \newline\newline 
 
 \textbf{Verwendung von Symbolen}:\newline
@@ -312,7 +312,7 @@ Symbole im Text erhöhen zwar oft dessen Präzision und machen den Text an sich 
 \end{enumerate}\
 \newline
 \textbf{Lesbarkeit und Übersichtlichkeit}: \newline 
-Ein einfacher aber sehr effektiver Weg einen Beweis zu verbessern besteht darin euren Beweis übersichtlich zu strukturieren und vor allem leserlich zu schreiben. 
+Ein einfacher aber sehr effektiver Weg einen Beweis zu verbessern besteht darin, euren Beweis übersichtlich zu strukturieren und vor allem leserlich zu schreiben. 
 Insbesondere kann der Korrektor so euren Gedankengang deutlich besser nachvollziehen, wodurch ihr ein besseres Feedback erhaltet.
 
 
