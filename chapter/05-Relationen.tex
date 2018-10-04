@@ -6,14 +6,14 @@ Da eine Funktion ein Spezialfall einer Relation ist werden wir uns zuerst einmal
 \section{Relationen}
 
 \begin{mydef}
-    Seien $A,B$ zwei nichtleere Mengen. Dann ist das \textit{kartesische Produkt} von $A$ und $B$ definiert durch:
+    Seien $A,B$ zwei Mengen. Dann ist das \textit{kartesische Produkt} von $A$ und $B$ definiert durch:
     \begin{align*}
         A \times B := \{ (a,b) | a \in A \wedge b \in B \}. 
     \end{align*}
 \end{mydef}
 
 \begin{mydef}
-    Seien $A,B$ zwei nichtleere Mengen und $A \times B$ das kartesische Produkt von $A$ und $B$. 
+    Seien $A,B$ zwei Mengen und $A \times B$ das kartesische Produkt von $A$ und $B$. 
     Eine Teilmenge $R \subseteq A \times B$ heißt dann auch eine (zweistellige) \textit{Relation} (zwischen $X$ und $Y$).
     Gilt $X = Y$ so spricht man auch von einer Relation \textit{auf} $X$.  
     Anstatt von $(x,y) \in R$ schreibt man auch $xRy$. 
@@ -34,7 +34,7 @@ Da eine Funktion ein Spezialfall einer Relation ist werden wir uns zuerst einmal
 Eine Relation kann verschiedene Eigenschaften haben: 
 
 \begin{mydef} 
-    Seien $X$ eine nichtleere Meng und $R \subseteq X \times X$ eine Relation. $R$ heißt
+    Sei $X$ eine Menge und $R \subseteq X \times X$ eine Relation. $R$ heißt
     \begin{enumerate}[(i)]
         \item 
         \textit{reflexiv}, falls: $\forall x \in X: (x,x) \in R$,
@@ -163,7 +163,7 @@ die Ihnen im Laufe des Studiums noch häufiger begegnen, werden im Folgenden vor
     Seien $X,Y$ nichtleere Mengen und sei $f:X \to Y$ eine Abbildung. 
     \begin{enumerate}[(i)]
         \item 
-        Sei $A \subseteq X$. Dann heißt $f(A):=\{y \in Y | \exists x \in X : f(x) = y \}$ das \textit{Bild} von $A$ unter $f$. 
+        Sei $A \subseteq X$. Dann heißt $f(A):=\{y \in Y | \exists x \in A : f(x) = y \}$ das \textit{Bild} von $A$ unter $f$. 
         \item 
         Sei $B \subseteq Y$. Dann heißt $f^{-1}(B):=\{x \in X | f(x) \in B \}$ das \textit{Urbild} von $B$ unter $f$. 
     \end{enumerate}
