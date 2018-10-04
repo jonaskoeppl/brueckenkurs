@@ -10,7 +10,7 @@
 \usepackage{amstext}
 \usepackage{enumerate} % für kleine römische Nummerierung
 \usepackage{url}
-\usepackage[onehalfspacing]{setspace} %1,5 Zeilenabstand 
+\usepackage[onehalfspacing]{setspace} % 1,5 Zeilenabstand
 
 
 % NEWCOMMANDS
@@ -40,7 +40,7 @@
 % THEOREMSTYLES
 
 \theorembodyfont{\upshape}
-\theoremstyle{changebreak} %Sorgt für Zeilenumbruch nach Titel und Nummer vor Name
+\theoremstyle{changebreak} % sorgt für Zeilenumbruch nach Titel und Nummer vor Name
 
 \newtheorem{theorem}{Satz} % Sätze, sollte später evtl. noch Lemma und Korollar hinzufügen
 \numberwithin{theorem}{chapter}
@@ -54,41 +54,41 @@
 \newtheorem{proposition}[theorem]{Proposition} % Propositionen
 \numberwithin{theorem}{chapter}
 
-\newtheorem{remark}[theorem]{Bemerkung} %Bemerkungen
+\newtheorem{remark}[theorem]{Bemerkung} % Bemerkungen
 \numberwithin{theorem}{chapter}
 
-\newtheorem{lemma}[theorem]{Lemma} %Lemmata
+\newtheorem{lemma}[theorem]{Lemma} % Lemmata
 \numberwithin{theorem}{chapter}
 
 \newtheorem*{proof*}{Beweis:}
 
-\setlength\parindent{0pt} %Kein Einzug bei neuem Paragraphen. 
+\setlength\parindent{0pt} % kein Einzug bei neuem Paragraphen
 
 \begin{document}
 
 \begin{titlepage}
     \ \newline\newline\newline\newline\newline
 
-	\begin{center}
+  \begin{center}
 
-		\huge Inoffizielles Skript \\
-		\Huge\textbf{Brückenkurs Mathematik}\\
-		\huge im Wintersemester 2018/2019\\ 
-		\normalsize
+  \huge Inoffizielles Skript\\
+  \Huge\textbf{Brückenkurs Mathematik}\\
+  \huge im Wintersemester 2018/2019\\
+  \normalsize
 
-		\vspace{1cm}
-		\begin{tabular}[b]{l|l}
-			\textbf{\ author}      & Jonas Köppl, N.N. \\\
-            \textbf{last change}   & \today \\\
+  \vspace{1cm}
+  \begin{tabular}[b]{l|l}
+  \textbf{\ author}      & Jonas Köppl, N.N.\\\
+            \textbf{last change}   & \today\\\
             \textbf{github}        & \url{https://github.com/jonaskoeppl/brueckenkurs}
-		\end{tabular}
-		\vspace{1cm}
+  \end{tabular}
+  \vspace{1cm}
 
-	\end{center}
+  \end{center}
 
 \end{titlepage}
 
-\tableofcontents 
+\tableofcontents
 
 
 \include{chapter/01-Einfuehrung}
@@ -96,6 +96,6 @@
 \include{chapter/03-Mengen}
 %TODO: Rechenregeln für Mengenoperationen, DeMorgan und Indexmengen
 \include{chapter/04-Aufbau}
-%TODO: Widerspruchsbeweis überarbeiten und Teilbarkeitsbeweise genauer anschauen. 
+%TODO: Widerspruchsbeweis überarbeiten und Teilbarkeitsbeweise genauer anschauen.
 \include{chapter/05-Relationen}
 \end{document}
