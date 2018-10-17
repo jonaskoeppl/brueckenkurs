@@ -9,9 +9,9 @@
 \usepackage{amssymb}
 \usepackage{amstext}
 \usepackage{enumerate} % für kleine römische Nummerierung
-\usepackage{url}
 \usepackage[onehalfspacing]{setspace} % 1,5 Zeilenabstand
-
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
 
 % NEWCOMMANDS
 % Syntax: \newcommand{\shortcut}{\wasrauskommensoll}
@@ -64,10 +64,21 @@
 
 \setlength\parindent{0pt} % kein Einzug bei neuem Paragraphen
 
+% PDF-META
+\hypersetup{pdftex,
+            pdfauthor={Jonas Köppl, Maximilian Reif},
+            pdftitle={Brückenkurs Mathematik - Inoffizielles Skript},
+            pdfsubject={},
+            pdfkeywords={},
+            pdfproducer={},
+            pdfcreator={},
+            pdfpagemode=UseOutlines
+}
+
 \begin{document}
 
 \begin{titlepage}
-    \ \newline\newline\newline\newline\newline
+  \ \newline\newline\newline\newline\newline
 
   \begin{center}
 
@@ -78,9 +89,9 @@
 
   \vspace{1cm}
   \begin{tabular}[b]{l|l}
-  \textbf{\ author}      & Jonas Köppl, N.N.\\\
-            \textbf{last change}   & \today\\\
-            \textbf{github}        & \url{https://github.com/jonaskoeppl/brueckenkurs}
+  \textbf{\ author}      & Jonas Köppl, Maximilian Reif, N.N.\\\
+  \textbf{last change}   & \today\\\
+  \textbf{github}        & \url{https://github.com/jonaskoeppl/brueckenkurs}
   \end{tabular}
   \vspace{1cm}
 
