@@ -16,6 +16,7 @@ Ziel einer mathematischen Definition ist es, einen Begriff durch
 mathematische Objekt \textit{eindeutig} entscheiden kann, ob dieses Objekt der
 Definition genügt oder nicht.
 
+
 \begin{mydef}
 Seien $a,b \in \Z$.
 Die Zahl $a$ heißt \textit{Teiler} von $b$ und $b$ heißt \textit{Vielfaches}
@@ -23,15 +24,15 @@ von $a$, wenn es ein $c \in \Z$ gibt mit $b = a \cdot c$.
 Man schreibt dann $a \mid b$. Die Negation ist $a \nmid b$.
 \end{mydef}
 
+
 \begin{mydef}
 Sei $n \in \Z$.
-    \begin{enumerate}
-        \item
-        Die Zahl $n$ heißt \textit{gerade}, falls $2 \mid n$.
-        \item
-        Falls $n$ nicht gerade ist, so heißt $n$ \textit{ungerade}.
-    \end{enumerate}
+\begin{enumerate}
+\item Die Zahl $n$ heißt \textit{gerade}, falls $2 \mid n$.
+\item Falls $n$ nicht gerade ist, so heißt $n$ \textit{ungerade}.
+\end{enumerate}
 \end{mydef}
+
 
 \begin{mydef}
 Eine Zahl $p \in \N$ heißt \textit{Primzahl}, falls $p > 1$ ist und $1$ und
@@ -39,14 +40,20 @@ $p$ die einzigen natürlichen Zahlen sind die $p$ teilen.
 Eine Zahl $n \in \N$, die keine Primzahl ist, heißt \textit{zusammengesetzt}.
 \end{mydef}
 
+
 Eine mathematische Definition sollte stets folgende Eigenschaften haben:
 \begin{itemize}
-    \item
-    \textbf{Eindeutigkeit}: Man kann eindeutig entscheiden, ob ein mathematisches Objekt die Definition erfüllt oder nicht.
-    \item
-    \textbf{Minimalität}: Es werden nur so viele Eigenschaften benutzt, wie für den Begriff unbedingt notwendig sind.
-    D.h. insbesondere, dass sich keine der Eigenschaften aus den restlichen Eigenschaften ableiten lässt.
+\item \textbf{Eindeutigkeit}:
+Man kann eindeutig entscheiden, ob ein mathematisches Objekt die Definition
+erfüllt oder nicht.
+
+\item \textbf{Minimalität}:
+Es werden nur so viele Eigenschaften benutzt, wie für den Begriff unbedingt
+notwendig sind.
+Insbesondere bedeutet das, dass sich keine der Eigenschaften aus den restlichen
+Eigenschaften ableiten lässt.
 \end{itemize}
+
 
 \section{Sätze und Beweise}
 
@@ -54,46 +61,54 @@ Unter einem mathematischen Satz (Lemma, Korollar, etc.) verstehen wir eine
 nicht-triviale mathematische Aussage, für die ein gültiger Beweis vorliegt.
 
 \begin{remark}
-    Zur Begriffsklärung:
-    \begin{enumerate}[(i)]
-        \item
-        \textbf{Satz, Theorem}: Dies ist das typische Resultat einer Theorie.
-        \item
-        \textbf{Hauptsatz}: So wird ein besonders wichtiger Satz in einem Teilgebiet der Mathematik
-        genannt, beispielsweise der Hauptsatz der Differential- und Integralrechnung aus der Analysis.
-        \item
-        \textbf{Lemma}:
-        Diese Bezeichnung wird in verschiedenen Zusammenhängen verwendet. Zum einen bezeichnet es
-        ein kleines, meist technisches Resultat, einen \textit{Hilfssatz}, der zum Beweis eines wichtigen
-        Satzes verwendet wird. Zum anderen handelt es sich dabei um besonders wichtige \textit{Schlüsselgedanken},
-        die in vielen Situationen nützlich sind. Solche Lemmata werden dann auch häufig mit dem Namen ihres Erfinders bezeichnet
-        (z.B. Lemma von Pratt, Lemma von Urysohn, Lemma von Zorn, etc.).
-        \item
-        \textbf{Proposition}:
-        Dies ist die lateinische Bezeichnung für Satz und wir manchmal synonmym verwendet,
-        meist aber um ein Resultat zu bezeichnen, dessen Wichtigkeit zwischen der eines Hilfssatzes
-        und der eines Theorems liegt.
-        \item
-        \textbf{Korollar}:
-        Dies ist die Bezeichnung für einen Satz, der aus einem anderen Satz durch triviale oder sehr einfache
-        Schlussweise folgt. Manchmal ist es aber auch ein Spezialfall eines vorhergehenden Satzes, dem besondere Aufmerksamkeit gebührt.
-    \end{enumerate}
+Zur Begriffsklärung:
 
+\begin{enumerate}[(i)]
+\item \textbf{Satz, Theorem}: Dies ist das typische Resultat einer Theorie.
+
+\item \textbf{Hauptsatz}:
+So wird ein besonders wichtiger Satz in einem Teilgebiet der Mathematik
+genannt, beispielsweise der Hauptsatz der Differential- und Integralrechnung
+aus der Analysis.
+
+\item \textbf{Lemma}:
+Diese Bezeichnung wird in verschiedenen Zusammenhängen verwendet.
+Zum einen bezeichnet es ein kleines, meist technisches Resultat, einen
+\textit{Hilfssatz}, der zum Beweis eines wichtigen Satzes verwendet wird.
+Zum anderen handelt es sich dabei um besonders wichtige
+\textit{Schlüsselgedanken}, die in vielen Situationen nützlich sind.
+Solche Lemmata werden dann auch häufig mit dem Namen ihres Erfinders bezeichnet
+(z.B. Lemma von Pratt, Lemma von Urysohn, Lemma von Zorn, etc.).
+
+\item \textbf{Proposition}:
+Dies ist die lateinische Bezeichnung für Satz und wir manchmal synonym
+verwendet, meist aber um ein Resultat zu bezeichnen, dessen Wichtigkeit
+zwischen der eines Hilfssatzes und der eines Theorems liegt.
+
+\item \textbf{Korollar}:
+Dies ist die Bezeichnung für einen Satz, der aus einem anderen Satz durch
+triviale oder sehr einfache Schlussweise folgt.
+Manchmal ist es aber auch ein Spezialfall eines vorhergehenden Satzes, dem
+besondere Aufmerksamkeit gebührt.
+\end{enumerate}
 \end{remark}
+
 
 \subsection{Direkter Beweis}
 Der direkte Beweis beweist eine Aussage durch schrittweises Folgen von Aussagen
 auf Basis der gegebenen Voraussetzung.
 Sei dazu $V$ die Voraussetzung und $B$ die zu zeigende Behauptung.
-Unsere Aufgabe ist es also nun, geeignete Aussagen $A_1, A_2,...,A_n$ zu finden,
-sodass schließlich gilt:
-\begin{align*}
-    (V \Rightarrow A_1) \wedge (A_1 \Rightarrow A_2) \wedge ... \wedge (A_n \Rightarrow B)
-\end{align*}
+Unsere Aufgabe ist es also nun, geeignete Aussagen $A_1, A_2,...,A_n$ zu
+finden, sodass schließlich gilt:
+\[
+  (V \Rightarrow A_1) \wedge (A_1 \Rightarrow A_2) \wedge ... \wedge
+  (A_n \Rightarrow B)
+\]
 Ist uns dies gelungen, so haben wir gezeigt, dass aus der Voraussetzung $V$
 stets auch die Behauptung $B$ folgt.
 Am besten veranschaulichen wir uns dies anhand eines einfachen Beispiels aus
 der Zahlentheorie.
+
 
 \begin{proposition}
 Sei $a \in \Z$ gerade.
@@ -104,67 +119,79 @@ Dann ist auch $a^2 = a \cdot a$ gerade.
 Sei $a \in \Z$ gerade.
 Nach Definition existiert dann $c \in \Z$ mit $a = 2 \cdot c$.
 Somit folgt:
-    \begin{align*}
-        a^2 = a \cdot a = 2c \cdot 2c = 2(2c^2).
-    \end{align*}
+\[
+  a^2 = a \cdot a = 2c \cdot 2c = 2(2c^2).
+\]
 Wegen $2c^2 \in \Z$ ist also auch $a^2$ gerade.
-    \hfill $\square$
+\hfill $\square$
 \end{proof*}
 
+
+\vspace*{3em}
 Allgemeiner lassen sich die folgenden Regeln zeigen:
 
+
 \begin{theorem}
-    \begin{enumerate}[(i)]
-        \item
-        Für jedes $a \in \Z$ gilt:
-        \begin{align*}
-            a \mid 0, \quad 1 \mid a, \quad -1 \mid a,  \quad a \mid a, \quad -a \mid a, \quad a \mid -a .
-        \end{align*}
-        \item
-        Für $a,b,c \in \Z$ gilt:
-        \begin{align*}
-            (a \mid b \ \wedge \ b \mid c) \Rightarrow a \mid c .
-        \end{align*}
-        \item
-        Seien $a,b_1,...,b_n \in \Z$. Gilt $a \mid b_i$ für alle $i \in \{1,...,n\}$, so gilt für alle $x_1,...,x_n \in \Z$:
-        \begin{align*}
-            a \mid x_1 b_1 + ... + x_n b_n .
-        \end{align*}
-        \item
-        Für $a,b,c,d \in \Z$ gilt:
-        \begin{align*}
-            (a \mid c \ \wedge  \ b \mid d) \Rightarrow ab \mid dc .
-        \end{align*}
-    \end{enumerate}
+\begin{enumerate}[(i)]
+\item Für jedes $a \in \Z$ gilt:
+\[
+  a \mid 0, \quad 1 \mid a, \quad -1 \mid a,  \quad a \mid a, \quad -a \mid a,
+  \quad a \mid -a .
+\]
+
+\item Für $a,b,c \in \Z$ gilt:
+\[
+  (a \mid b \ \wedge \ b \mid c) \Rightarrow a \mid c .
+\]
+
+\item Seien $a,b_1,...,b_n \in \Z$.
+Gilt $a \mid b_i$ für alle $i \in \{1,...,n\}$,
+so gilt für alle $x_1,...,x_n \in \Z$:
+\[
+  a \mid x_1 b_1 + ... + x_n b_n .
+\]
+
+\item Für $a,b,c,d \in \Z$ gilt:
+\[
+  (a \mid c \ \wedge  \ b \mid d) \Rightarrow ab \mid dc .
+\]
+\end{enumerate}
 \end{theorem}
 
+
 \begin{proof*}
-    [Zur Übung]
+[Zur Übung]
 \end{proof*}
 
+
 \subsection{Indirekter Beweis}
-Eine weitere oft verwendete Beweistechnik ist die des \textit{Indirekten Beweis}.
+Eine weitere oft verwendete Beweistechnik ist die des
+\textit{Indirekten Beweis}.
 Diese beruht auf der folgenden logischen Äquivalenz:
 Seien $V$ und $B$ zwei Aussagen, dann gilt:
 
-\begin{align}
+\[
     (V \Rightarrow B) \iff (\neg B \Rightarrow \neg V).
-\end{align}
+\]
 
 Diese Beweistechnik bietet sich in einigen Fällen an, da die rechte Implikation
 manchmal einfacher zu zeigen ist als die linke.
 Zusammengefasst ergibt sich das folgende Schema um eine Aussage der Form
 $A \Rightarrow B$ zu zeigen:
+
 \begin{enumerate}
-    \item
-    Wir nehmen a n es gelte $\neg B$ (und bringen dies auch zum Ausdruck, sodass auch der Leser oder Korrektor sieht, was wir vorhaben).
-    \item
-    Aus der Aussage $\neg B$ und anderen uns zur Verfügung stehenden Definitionen und Sätzen leiten wir $\neg V$ ab.
-    \item
-    Wegen der oben beschrieben Äquivalenz gilt dann auch $V \Rightarrow B$.
+\item Wir nehmen a n es gelte $\neg B$ (und bringen dies auch zum Ausdruck,
+sodass auch der Leser oder Korrektor sieht, was wir vorhaben).
+
+\item Aus der Aussage $\neg B$ und anderen uns zur Verfügung stehenden
+Definitionen und Sätzen leiten wir $\neg V$ ab.
+
+\item Wegen der oben beschrieben Äquivalenz gilt dann auch $V \Rightarrow B$.
 \end{enumerate}
 
+
 Diese Vorgehensweise werden wir nun verwenden um den folgenden Satz zu beweisen.
+
 
 \begin{theorem}
 Sei $n \in \Z$, sodass $n^2$ gerade ist.
@@ -172,16 +199,18 @@ Dann ist auch $n$ gerade.
 \end{theorem}
 
 \begin{proof*}
-Sei also $n \in \Z$ ungerade. Wir zeigen nun, dass dann auch das Quadrat
+Sei also $n \in \Z$ ungerade.
+Wir zeigen nun, dass dann auch das Quadrat
 von $n$ ungerade ist.
 Da $n$ ungerade ist existiert $c \in \Z$ mit $n = 2c + 1$.
 Somit erhalten wir durch Anwendung der ersten binomischen Formel:
-\begin{align*}
-    n^2 = (2c +1)^2 = 4c^2 + 4c + 1 = 2(2c^2+2c) + 1 .
-\end{align*}
+\[
+    n^2 = (2c +1)^2 = 4c^2 + 4c + 1 = 2(2c^2 + 2c) + 1 .
+\]
 Also ist $n^2$ ungerade und die Behauptung gezeigt.
 \hfill $\square$
 \end{proof*}
+
 
 Für diese Beweistechnik ist es sehr wichtig, dass man sich darüber im Klaren
 ist, wie die Negation einer Aussage lautet.
@@ -192,63 +221,70 @@ Daher wollen wir dies mit ein paar Beispielen vertiefen.
 
 Der \textit{Widerspruchsbeweis} (auch bekannt als \textit{Reductio ad absurdum})
 basiert auf der logischen Äquivalenz:
-\begin{align*}
+\[
 (V \Rightarrow B) \iff \neg (V \wedge \neg B)
-\end{align*}
+\]
 
 Ein Beweis per Widerspruch verläuft also nach dem folgenden Schema:
+
 \begin{enumerate}
-    \item
-    Wir bringen zum Ausdruck, dass der Beweis per Widerspruch erfolgen soll. Meist schreibt man einfach: \glqq Widerspruchsannahme: $\neg B$ \grqq.
-    Auch hier ist es wichtig, dass man die Negation der Aussage $B$ richtig formuliert.
-    \item
-    Aus den Aussagen $V$ und $\neg B$ leiten wir nun eine Aussage ab, von der wir bereits wissen, dass sie falsch ist.
-    \item
-    Um zu zeigen, dass dies der gewünschte Widerspruch ist markieren wir die Stelle durch einen Blitz oder durch das Wort \glqq Widerspruch\grqq.
+\item Wir bringen zum Ausdruck, dass der Beweis per Widerspruch erfolgen soll.
+Meist schreibt man einfach: \glqq Widerspruchsannahme: $\neg B$\grqq.
+Auch hier ist es wichtig, dass man die Negation der Aussage $B$ richtig
+formuliert.
+
+\item Aus den Aussagen $V$ und $\neg B$ leiten wir nun eine Aussage ab, von der
+wir bereits wissen, dass sie falsch ist.
+
+\item Um zu zeigen, dass dies der gewünschte Widerspruch ist markieren wir die
+Stelle durch einen Blitz oder durch das Wort \glqq Widerspruch\grqq.
 \end{enumerate}
 
 Da diese Beweistechnik einem nicht direkt einleuchtend erscheint, werden wir
 uns ein paar Beispiele dazu anschauen.
 
 \begin{lemma}
-    \begin{enumerate}[(i)]
-        \item
-        Ist $b \in \Z \setminus \{0\}$ so gilt für jeden Teiler $a$ von $b$ : 1 $\leq \lvert a \rvert \leq \lvert b \rvert$.
-        \item
-        Die einzigen Teiler von $1$ sind $1$ und $-1$.
-        \item
-        Für $a,b \in \Z$ gilt:
-        \begin{align*}
-            a \mid b \ \wedge \ b \mid a \iff b = a \text{  oder } b = -a.
-        \end{align*}
-    \end{enumerate}
+\begin{enumerate}[(i)]
+\item Ist $b \in \Z \setminus \{0\}$ so gilt für jeden Teiler $a$ von $b$:
+1 $\leq \lvert a \rvert \leq \lvert b \rvert$.
+
+\item Die einzigen Teiler von $1$ sind $1$ und $-1$.
+
+\item Für $a,b \in \Z$ gilt:
+\[
+  a \mid b \ \wedge \ b \mid a \iff b = a \text{ oder } b = -a.
+\]
+\end{enumerate}
 \end{lemma}
 
 \begin{proof*}
-\textbf{zu (i):}\newline
+\textbf{zu (i):}\\
 Seien $a,b \in \Z$ mit $b \neq 0$ und gelte $a \mid b$.
 Dann existiert ein $n \in \Z$ mit $b = n \cdot a$ und somit gilt auch $n \neq 0$.
 Die erste Ungleichung ist wegen $b \neq 0$ klar.
 Angenommen es gilt $\lvert a \rvert > \lvert b \rvert$.
 Dann folgt unter Verwendung elementarer Rechenregeln für die Betragsfunktion:
-\begin{align*}
-        \lvert b \rvert = \lvert n a \rvert = \lvert n \rvert \lvert a \rvert \geq \lvert a \rvert > \lvert b \rvert
-\end{align*}
+\[
+  \lvert b \rvert = \lvert n a \rvert = \lvert n \rvert \lvert a \rvert
+  \geq \lvert a \rvert > \lvert b \rvert
+\]
 Widerspruch.
-Also gilt $1 \leq \lvert a \rvert \leq \lvert b \rvert$.\newline
- \textbf{zu (ii),(iii):} [Zur Übung].
- \hfill $\square$
+Also gilt $1 \leq \lvert a \rvert \leq \lvert b \rvert$.\\
+\textbf{zu (ii), (iii):} [Zur Übung].
+\hfill $\square$
 \end{proof*}
+
 
 \begin{lemma}
 Sei $a \in \N$ mit $a > 1$.
 Dann gibt es $r \in \N$ und Primzahlen $p_1,...,p_r$, sodass:
 \begin{align}
-    a = p_1 \cdot ... \cdot p_r
+    a = p_1 \cdot ... \cdot p_r \label{pfz}
 \end{align}
-Die Zerlegung (4.2) wird auch als die \textit{Primfaktorzerlegung} von $a$
-bezeichnet.
+Die Zerlegung (\ref{pfz}) wird auch als die \textit{Primfaktorzerlegung} von
+$a$ bezeichnet.
 \end{lemma}
+
 
 \begin{proof*}%TODO: überarbeiten
 Angenommen die Behauptung des Lemmas ist falsch.
@@ -262,21 +298,24 @@ Nach Lemma 4.8 gilt ferner:
 $b < a$ und $c < a$. Da $a$ die kleinste natürliche Zahl ist, die keine
 derartige Zerlegung besitzt lassen sich $b$ und $c$ in Primfaktoren zerlegen:
 \begin{align*}
-    b &= p_1 \cdot ... \cdot p_s \\\
-    c &= p_{s+1} \cdot ... \cdot p_k
+    b &= p_1 \cdot \ldots \cdot p_s \\\
+    c &= p_{s+1} \cdot \ldots \cdot p_k
 \end{align*}
 Somit folgt
-\begin{align*}
-    a = b c = p_1 ... p_s p_{s+1} ... p_k
-\end{align*}
+\[
+    a = b c = p_1 \ldots p_s p_{s+1} \ldots p_k
+\]
 im Widerspruch zur Voraussetzung.
 Also besitzt jede natürliche Zahl eine Primfaktorzerlegung.
 \hfill $\square$
 \end{proof*}
 
+
+\vspace*{3em}
 Auf Basis dieses Lemmas können wir nun den folgenden, auf Euklid
 zurückgehenden Satz beweisen.
 Auch diesen werden wir per Widerspruch beweisen.
+
 
 \begin{theorem}
 Es gibt unendlich viele Primzahlen.
@@ -286,25 +325,30 @@ Es gibt unendlich viele Primzahlen.
 Die Negation von \textit{unendlich viele} ist \textit{endlich viele}.
 Also nehmen wir an, dass es nur endlich viele Primzahlen gibt.
 Sei also
-\begin{align*}
-    P = \{p_1,...,p_n\}
-\end{align*}
+\[
+  P = \{p_1,\ldots,p_n\}
+\]
 die Menge aller Primzahlen.
 Setze nun
-\begin{align*}
-    a = p_1 ... p_n + 1
-\end{align*}
+\[
+  a = p_1 \ldots p_n + 1
+\]
 Dann gilt offensichtlich $a>1$.
 Nach Lemma 4.10 lässt sich $a$ also in Primfaktoren zerlegen.
-Es gilt also $p_i \mid a$ für ein $i \in \{1,...,n\}$.
-Wegen $p_i \mid p_1 ... p_n$ gilt nach Satz 4.6 : $p_i \mid a - p_1 ... p_n = 1$.
+Es gilt also $p_i \mid a$ für ein $i \in \{1,\ldots,n\}$.
+Wegen $p_i \mid p_1 ... p_n$ gilt nach Satz 4.6:
+$p_i \mid a - p_1 ... p_n = 1$.
 Also $p_i \mid 1$.
-Dies liefert $p_i = 1$. Im Widerspruch dazu, dass $p_i$ eine Primzahl ist.
+Dies liefert $p_i = 1$.
+Im Widerspruch dazu, dass $p_i$ eine Primzahl ist.
 \hfill $\square$
 \end{proof*}
 
+
+\vspace*{3em}
 Ein weiteres klassisches Resultat, welches man per Widerspruch beweist, ist
 folgender Satz, den wir schon zuvor als Beispiel gesehen haben.
+
 
 \begin{theorem}
 Die Zahl $\sqrt{2}$ ist irrational.
@@ -316,26 +360,27 @@ Angenommen $\sqrt{2}$ ist rational.
 Dann existieren $p,q \in \N$ mit $\sqrt{2} = \frac{p}{q}$.
 Ferner seien $p$ und $q$ teilerfremd.
 Es gilt also insbesondere:
-\begin{align*}
-    \big(\frac{p}{q}\big)^2 = 2 .
-\end{align*}
+\[
+  \big(\frac{p}{q}\big)^2 = 2 .
+\]
 Somit folgt durch Umstellen:
-\begin{align*}
-    p^2 = 2q^2.
-\end{align*}
+\[
+  p^2 = 2q^2.
+\]
 Also ist $p^2$ eine gerade Zahl.
 Nach Satz 4.7 ist damit auch $p$ gerade, folglich existiert ein $n \in \N$
 mit $p = 2n$.
 Dies liefert wiederum:
-\begin{align*}
-    2q^2 = p^2 = (2n)^2 = 4n^2.
-\end{align*}
+\[
+  2q^2 = p^2 = (2n)^2 = 4n^2.
+\]
 Also gilt insbesondere $q^2 = 2n^2$.
 Daher ist auch $q$ durch zwei teilbar.
 Im Widerspruch dazu, dass $p$ und $q$ teilerfremd sind.
 Somit kann $\sqrt{2}$ keine rationale Zahl sein und die Behauptung ist gezeigt.
-\hfill $\square$.
+\hfill $\square$
 \end{proof*}
+
 
 \subsection{Allgemeine Tipps für Beweise}
 
@@ -346,55 +391,53 @@ Dies führt bei vielen zu Frustration, da die Gedankengänge an sich oftmals in
 die richtige Richtung gehen, aber nicht in mathematisch korrekter Weise
 formuliert werden, was meist zu Punktabzügen führt.
 Im Folgenden geben wir einige Tipps, die beim Aufschreiben eines Beweises bzw.
-beim Bearbeiten von Übungsaufgaben helfen können.
-\newline
-\newline
-\textbf{Voraussetzungen (Setting)}:\newline
+beim Bearbeiten von Übungsaufgaben helfen können. \\
+
+\textbf{Voraussetzungen (Setting)}: \\
 Der erste Schritt eines jeden Beweises ist es, die Voraussetzungen klar und
 deutlich aufzuschreiben.
 Es ist oftmals sinnvoll, die einzelnen Teilaussagen des Settings
-durchzunummerieren.
-\newline\newline
-\textbf{Skizze}:\newline
-Manchmal kann es durchaus hilfreich sein, sich eine Skizze von einem Sachverhalt
-zu machen.
+durchzunummerieren. \\
+
+\textbf{Skizze}: \\
+Manchmal kann es durchaus hilfreich sein, sich eine Skizze von einem
+Sachverhalt zu machen.
 Dies dient dazu, ein besseres Verständnis des Problems zu erhalten.
 Ist das Problem geometrischer Natur so kann man sich auch die Beweisidee in die
 Skizze einzeichnen.
 Dies dient jedoch lediglich zur Veranschaulichung und ist auf keinen Fall ein
-Beweis.
-\newline\newline
-\textbf{Fallunterscheidung}:\newline
-Bevor mit dem eigentlichen Beweis begonnen wird kann man sich fragen, ob man das
-Problem in zwei Teilprobleme aufteilen sollte, die beide einfacher wären,
+Beweis. \\
+
+\textbf{Fallunterscheidung}: \\
+Bevor mit dem eigentlichen Beweis begonnen wird kann man sich fragen, ob man
+das Problem in zwei Teilprobleme aufteilen sollte, die beide einfacher wären,
 als das große Problem auf einmal zu lösen.
-Auch Spezialfälle können per Fallunterscheidung ausgegliedert werden.
-\newline\newline
-\textbf{OBdA / OE}:\newline
+Auch Spezialfälle können per Fallunterscheidung ausgegliedert werden. \\
+
+\textbf{OBdA / OE}: \\
 OBdA ist die Abkürzung von \textit{Ohne Beschränkung der Allgemeintheit} und
 OE steht für \textit{Ohne Einschränkung}.
 Dies wird verwendet, wenn eigentlich eine Fallunterscheidung angewendet werden
 müsste, jedoch alle anderen Fälle einfach aus dem behandelten Fall gefolgert
 werden können.
-Dieses Mittel sollte auf jeden Fall mit Bedacht eingesetzt werden.
-\newline\newline
-\textbf{Gegenbeispiele}:\newline
-Gegenbeispiele sind das Mittel der Wahl, um eine falsche Aussage zu widerlegen.
-\newline\newline
+Dieses Mittel sollte auf jeden Fall mit Bedacht eingesetzt werden. \\
 
-\textbf{Verwendung von Symbolen}:\newline
+\textbf{Gegenbeispiele}: \\
+Gegenbeispiele sind das Mittel der Wahl, um eine falsche Aussage zu widerlegen.
+\newline
+
+\textbf{Verwendung von Symbolen}: \\
 Symbole im Text erhöhen zwar oft dessen Präzision und machen den Text an sich
 kürzer, allerdings sollte man zur besseren Lesbarkeit ein paar Regeln beachten.
 \begin{enumerate}
-    \item
-    Ein Satz sollte nicht mit einem Symbol beginnen.
-    \item
-    Zwei mathematische Symbole sollten im Fließtext stets durch mindestens ein Wort getrennt werden.
-    \item
-    Mathematische Symbole sollten nicht als Abkürzung für Worte im Text verwendet werden.
-\end{enumerate}\
-\newline
-\textbf{Lesbarkeit und Übersichtlichkeit}: \newline
+\item Ein Satz sollte nicht mit einem Symbol beginnen.
+\item Zwei mathematische Symbole sollten im Fließtext stets durch mindestens
+ein Wort getrennt werden.
+\item Mathematische Symbole sollten nicht als Abkürzung für Worte im Text
+verwendet werden.
+\end{enumerate}
+
+\textbf{Lesbarkeit und Übersichtlichkeit}: \\
 Ein einfacher aber sehr effektiver Weg einen Beweis zu verbessern besteht darin,
 euren Beweis übersichtlich zu strukturieren und vor allem leserlich zu schreiben.
 Insbesondere kann der Korrektor so euren Gedankengang deutlich besser

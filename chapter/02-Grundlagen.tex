@@ -11,78 +11,84 @@ Dabei ist es nicht erforderlich, sagen zu können, \textit{ob} die Aussage wahr
 oder falsch ist.
 \end{mydef}
 
+
 Am besten veranschaulichen wir uns das mit einem Beispiel und einer Übungsaufgabe.
 
+
 \begin{example}
-    \begin{enumerate}[(i)]
-        \item
-        Es regnet. (Zeit- und ortsabhängig wahr oder falsch.)
-        \item
-        11 ist durch 5 teilbar.
-        \item
-        Es gibt unendlich viele Primzahlen. (Wahr, Beweis folgt.)
-    \end{enumerate}
+\begin{enumerate}[(i)]
+\item Es regnet. (Zeit- und ortsabhängig wahr oder falsch.)
+\item 11 ist durch 5 teilbar. (Falsch.)
+\item Es gibt unendlich viele Primzahlen. (Wahr, Beweis folgt.)
+\item Es gibt unendlich viele Primzahlzwillinge (Unbewiesen, Stand 17.10.18.)
+\end{enumerate}
 \end{example}
+
 
 Wir interessieren uns vor allem für mathematische Aussagen und deren
 Wahrheitsgehalt.
 Zunächst benötigen wir jedoch noch Möglichkeiten, um mehrere Aussagen
 \textit{logisch zu verknüpfen}.
 
+
 \begin{mydef}
-Wenn $P$ und $Q$ Aussagen sind, dann heißt $P \wedge Q$ die \textit{Konjunktion}
-von $P$ und $Q$.
+Wenn $P$ und $Q$ Aussagen sind, dann heißt $P \wedge Q$ die
+\textit{Konjunktion} von $P$ und $Q$.
 Der Wahrheitswert von $P \wedge Q$ ist definiert durch die Wahrheitswerte von
 $P$ und $Q$ mittels folgender \textit{Wahrheitstafel}:
 
-\begin{tabular}{ c | c | c }
-        $P$ & $Q$ & $P \wedge Q$ \\
-        \hline
-        w & w & w \\
-        w & f & f \\
-        f & w & f \\
-        f & f & f \\
-    \end{tabular}
-    \newline
-D.h. $P \wedge Q$ ist genau dann wahr, wenn $P$ und $Q$ beide wahr sind,
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+$P$ & $Q$ & $P \wedge Q$ \\ \hline
+w   & w   & w \\
+w   & f   & f \\
+f   & w   & f \\
+f   & f   & f
+\end{tabular}
+\end{table}
+
+Das heißt $P \wedge Q$ ist genau dann wahr, wenn $P$ und $Q$ beide wahr sind
 und sonst falsch.
 \end{mydef}
 
+
 \begin{example}
-    \begin{enumerate}[(i)]
-        \item
-        ($\sqrt{2}$ ist irrational) $\wedge$ ($\sqrt{2} > 0$) (wahr)
-        \item
-        $(2 + 2 = 4) \wedge (3 + 2 = 7)$ (falsch)
-    \end{enumerate}
+\begin{enumerate}[(i)]
+\item ($\sqrt{2}$ ist irrational) $\wedge$ ($\sqrt{2} > 0$) (Wahr.)
+\item $(2 + 2 = 4) \wedge (3 + 2 = 7)$ (Falsch.)
+\end{enumerate}
 \end{example}
+
 
 \begin{mydef}
 Wenn $P$ und $Q$ Aussagen sind, so heißt $P \vee Q$ die \textit{Disjunktion}
 von $P$ und $Q$.
 Die definierende Wahrheitstafel ist gegeben durch:
 
-    \begin{tabular}{ c | c | c }
-        $P$ & $Q$ & $P \vee Q$ \\
-        \hline
-        w & w & w \\
-        w & f & w \\
-        f & w & w \\
-        f & f & f \\
-    \end{tabular}
-    \newline
-D.h. $P \vee Q$ ist genau dann wahr, wenn mindestens eine der beiden
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+$P$ & $Q$ & $P \vee Q$ \\ \hline
+w   & w   & w \\
+w   & f   & w \\
+f   & w   & w \\
+f   & f   & f
+\end{tabular}
+\end{table}
+
+Das heißt $P \vee Q$ ist genau dann wahr, wenn mindestens eine der beiden
 Teilaussagen wahr ist.
 \end{mydef}
 
+
 \begin{example}
-    \begin{enumerate}[(i)]
-        \item
-        ($\sqrt{2}$ ist irrational) $\vee$ ($\sqrt{2} > 0$) (wahr)
-        \item
-        $(2 + 2 = 4) \vee (3 + 2 = 7)$ (wahr)
-    \end{enumerate}
+\begin{enumerate}[(i)]
+\item ($\sqrt{2}$ ist irrational) $\vee$ ($\sqrt{2} > 0$) (Wahr.)
+\item $(2 + 2 = 4) \vee (3 + 2 = 7)$ (Wahr.)
+\end{enumerate}
 \end{example}
+
 
 \begin{remark}
 Im Gegensatz zur Umgangssprache ist mit dem mathematischen oder stets das
@@ -91,41 +97,50 @@ Möchte man das \textit{exklusive oder} verwenden, so nutzt man den Ausdruck
 \glqq entweder \ldots\ oder\ldots\grqq.
 \end{remark}
 
+
 \begin{mydef}
 Wenn $P$ eine Aussage ist, dann heißt $\neg P$ die \textit{Negation} von $P$.
 Definierende Wahrheitstafel:
 
-    \begin{tabular}{ c | c | c }
-        $P$ &  $\neg P$ \\
-        \hline
-        w & f  \\
-        f & w  \\
-    \end{tabular}
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c}
+$P$ & $\neg P$ \\ \hline
+w   & f \\
+f   & w
+\end{tabular}
+\end{table}
 \end{mydef}
+
 
 \begin{mydef}
 Wenn $P$ und $Q$ zwei Aussagen sind, so heißt $P \Rightarrow Q$
 (sprich: wenn $P$, dann $Q$) die \textit{Implikation} von Q durch P.
 Definierende Wahrheitstafel:
 
-    \begin{tabular}{ c | c | c }
-        $P$ & $Q$ & $P \Rightarrow Q$ \\
-        \hline
-        w & w & w \\
-        w & f & f \\
-        f & w & w \\
-        f & f & w \\
-    \end{tabular}
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+$P$ & $Q$ & $P \Rightarrow Q$ \\ \hline
+w   & w   & w \\
+w   & f   & f \\
+f   & w   & w \\
+f   & f   & w
+\end{tabular}
+\end{table}
 \end{mydef}
 
+
 \begin{example}
-    \begin{enumerate}[(i)]
-        \item
-        Wenn $ 3 > 2$, dann teilt $5$ die Zahl $10$.  (wahr)
-        \item
-        Wenn $2 > 3$, dann ist die Erde eine Scheibe. (wahr)
-    \end{enumerate}
+\begin{enumerate}[(i)]
+\item Wenn $ 3 > 2$, dann teilt $5$ die Zahl $10$. (Wahr.)
+\item Wenn $2 > 3$, dann ist die Erde eine Scheibe. (Wahr.)
+\end{enumerate}
 \end{example}
+
+
+% TODO: Regen => Straße nass
+
 
 \begin{mydef}
 Wenn $P$ und $Q$ Aussagen sind, so heißt die Verknüpfung
@@ -134,18 +149,21 @@ $P$ und $Q$.
 Abkürzend schreibt man auch $P \iff Q$.
 Die definierende Wahrheitstafel ist:
 
-    \begin{tabular}{ c | c | c }
-        $P$ & $Q$ & $P \iff Q$ \\
-        \hline
-        w & w & w \\
-        w & f & f \\
-        f & w & f \\
-        f & f & w \\
-    \end{tabular}
-\end{mydef}\
-\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+$P$ & $Q$ & $P \iff Q$ \\ \hline
+w   & w   & w \\
+w   & f   & f \\
+f   & w   & f \\
+f   & f   & w
+\end{tabular}
+\end{table}
+\end{mydef}
 
-Um all diese neuen Definitionen, und vor allem die Verwendung von Wahrheitstafeln,
-einzuüben, lohnt es sich, einige der zugehörigen Übungsaufgaben zu lösen.
-Ferner sollten Sie versuchen, sich mit selbstständig erstellten Beispielen besser
-mit dem Stoff vertraut zu machen.
+\vspace*{3em}
+Um all diese neuen Definitionen, und vor allem die Verwendung von
+Wahrheitstafeln, einzuüben, lohnt es sich, einige der zugehörigen
+Übungsaufgaben zu lösen.
+Ferner sollten Sie versuchen, sich mit selbstständig erstellten Beispielen
+besser mit dem Stoff vertraut zu machen.
